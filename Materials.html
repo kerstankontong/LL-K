@@ -1,0 +1,260 @@
+   <!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Building Materials | LL & K Company Limited</title>
+
+<style>
+:root{
+  --primary:#0b3c5d;
+  --secondary:#1d2731;
+  --accent:#f4b41a;
+  --light:#f8f9fa;
+}
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:"Segoe UI", Arial, sans-serif;
+}
+
+body{
+  color:#333;
+  line-height:1.6;
+}
+
+/* HEADER */
+header{
+  background:#fff;
+  padding:20px 8%;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  box-shadow:0 2px 10px rgba(0,0,0,0.05);
+}
+
+header h1{
+  color:var(--primary);
+  font-size:22px;
+}
+
+nav a{
+  margin-left:25px;
+  text-decoration:none;
+  color:#333;
+  font-weight:500;
+}
+
+nav a:hover{
+  color:var(--accent);
+}
+
+/* HERO */
+.page-hero{
+  background:linear-gradient(rgba(11,60,93,0.85),rgba(11,60,93,0.85)),
+  url("https://images.unsplash.com/photo-1590642913036-6f47c5e43a6a") center/cover;
+  color:#fff;
+  padding:90px 8%;
+}
+
+.page-hero h2{
+  font-size:38px;
+}
+
+.page-hero p{
+  margin-top:15px;
+  max-width:750px;
+}
+
+/* SECTION */
+section{
+  padding:80px 8%;
+}
+
+/* MATERIALS GRID */
+.materials-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+  gap:30px;
+}
+
+.material-card{
+  background:var(--light);
+  border-radius:6px;
+  overflow:hidden;
+  transition:0.3s;
+}
+
+.material-card:hover{
+  transform:translateY(-8px);
+  box-shadow:0 12px 30px rgba(0,0,0,0.12);
+}
+
+.material-card img{
+  width:100%;
+  height:180px;
+  object-fit:cover;
+}
+
+.material-card .content{
+  padding:25px;
+}
+
+.material-card h3{
+  color:var(--secondary);
+  margin-bottom:10px;
+}
+
+.material-card p{
+  font-size:14.5px;
+}
+
+/* CTA */
+.cta{
+  background:var(--primary);
+  color:#fff;
+  text-align:center;
+}
+
+.cta h2{
+  font-size:32px;
+}
+
+.cta button{
+  margin-top:20px;
+  padding:14px 34px;
+  background:var(--accent);
+  border:none;
+  font-size:16px;
+  cursor:pointer;
+  font-weight:600;
+}
+
+/* FOOTER */
+footer{
+  background:#111;
+  color:#ccc;
+  text-align:center;
+  padding:25px;
+}
+
+/* RESPONSIVE */
+@media(max-width:768px){
+  .page-hero h2{
+    font-size:30px;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <h1>LL & K Company Limited</h1>
+  <nav>
+    <a href="Home.html">Home</a>
+    <a href="Services.html">Services</a>
+    <a href="About.html">About</a>
+    <a href="Materials.html">Materials</a>
+    <a href="Contact.html">Contact</a>
+  </nav>
+</header>
+
+<section class="page-hero">
+  <h2>Quality Building Materials Supply</h2>
+  <p>
+    We supply reliable, high-quality building materials that meet
+    industry standards for residential, commercial, and infrastructure projects.
+  </p>
+</section>
+
+<section>
+  <div class="materials-grid">
+
+    <div class="material-card">
+      <img src="Cement.webp">
+      <div class="content">
+        <h3>Cement</h3>
+        <p>High-grade cement suitable for all types of construction works.</p>
+      </div>
+    </div>
+
+    <div class="material-card">
+      <img src="Iron.webp">
+      <div class="content">
+        <h3>Iron Rods & Steel</h3>
+        <p>Durable reinforcement steel and iron rods in various sizes.</p>
+      </div>
+    </div>
+
+    <div class="material-card">
+      <img src="Blocks.webp">
+      <div class="content">
+        <h3>Blocks & Bricks</h3>
+        <p>Quality blocks and bricks for strong and long-lasting structures.</p>
+      </div>
+    </div>
+
+    <div class="material-card">
+      <img src="Sand.webp">
+      <div class="content">
+        <h3>Sand & Aggregates</h3>
+        <p>Washed sand, stones, and aggregates for concrete and masonry works.</p>
+      </div>
+    </div>
+
+    <div class="material-card">
+      <img src="Timber.webp">
+      <div class="content">
+        <h3>Timber Products</h3>
+        <p>Quality timber for formwork, roofing, and finishing works.</p>
+      </div>
+    </div>
+
+    <div class="material-card">
+      <img src="Construction.webp">
+      <div class="content">
+        <h3>Construction Accessories</h3>
+        <p>Nails, binding wire, plumbing, and essential construction items.</p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<section class="cta">
+  <h2>Need Materials for Your Project?</h2>
+  <p>Contact us for reliable supply and timely delivery.</p>
+  <a href="Contact.html">Contact Us today!</a>
+</section>
+
+<footer>
+  © 2026 LL & K Company Limited. All Rights Reserved.
+</footer>
+
+<script>
+// Animation
+const cards = document.querySelectorAll(".material-card");
+
+window.addEventListener("scroll", () => {
+  cards.forEach(card => {
+    const pos = card.getBoundingClientRect().top;
+    if(pos < window.innerHeight - 80){
+      card.style.opacity = 1;
+      card.style.transform = "translateY(0)";
+    }
+  });
+});
+
+cards.forEach(card => {
+  card.style.opacity = 0;
+  card.style.transform = "translateY(30px)";
+  card.style.transition = "0.5s ease";
+});
+</script>
+
+</body>
+</html>
+

@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>About Us | LL & K Company Limited</title>
+
+<style>
+:root{
+  --primary:#0b3c5d;
+  --secondary:#1d2731;
+  --accent:#f4b41a;
+  --light:#f8f9fa;
+}
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:"Segoe UI", Arial, sans-serif;
+}
+
+body{
+  color:#333;
+  line-height:1.7;
+}
+
+/* HEADER */
+header{
+  background:#fff;
+  padding:20px 8%;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  box-shadow:0 2px 10px rgba(0,0,0,0.05);
+}
+
+header h1{
+  color:var(--primary);
+  font-size:22px;
+}
+
+nav a{
+  margin-left:25px;
+  text-decoration:none;
+  color:#333;
+  font-weight:500;
+}
+
+nav a:hover{
+  color:var(--accent);
+}
+
+/* HERO */
+.page-hero{
+  background:linear-gradient(rgba(11,60,93,0.85),rgba(11,60,93,0.85)),
+  url("https://images.unsplash.com/photo-1521737604893-d14cc237f11d") center/cover;
+  color:#fff;
+  padding:90px 8%;
+}
+
+.page-hero h2{
+  font-size:40px;
+}
+
+.page-hero p{
+  margin-top:15px;
+  max-width:750px;
+}
+
+/* SECTIONS */
+section{
+  padding:80px 8%;
+}
+
+/* ABOUT INTRO */
+.about-intro{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:50px;
+}
+
+.about-intro img{
+  width:100%;
+  border-radius:6px;
+}
+
+.about-intro h3{
+  color:var(--primary);
+  margin-bottom:15px;
+}
+
+/* VALUES */
+.values{
+  background:var(--light);
+}
+
+.values-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+  gap:30px;
+}
+
+.value-box{
+  background:#fff;
+  padding:30px;
+  border-radius:6px;
+  border-top:5px solid var(--primary);
+  transition:0.3s;
+}
+
+.value-box:hover{
+  transform:translateY(-6px);
+  box-shadow:0 10px 25px rgba(0,0,0,0.1);
+}
+
+/* MISSION */
+.mission{
+  background:var(--primary);
+  color:#fff;
+}
+
+.mission-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+  gap:40px;
+}
+
+.mission-box{
+  background:rgba(255,255,255,0.1);
+  padding:30px;
+  border-radius:6px;
+}
+
+/* CTA */
+.cta{
+  background:var(--accent);
+  text-align:center;
+  color:#000;
+}
+
+.cta h2{
+  font-size:32px;
+}
+h1{
+  text-align:left;
+}
+
+.cta button{
+  margin-top:20px;
+  padding:14px 34px;
+  background:#000;
+  color:#fff;
+  border:none;
+  cursor:pointer;
+  font-size:16px;
+}
+
+/* FOOTER */
+footer{
+  background:#111;
+  color:#ccc;
+  text-align:center;
+  padding:25px;
+}
+
+/* RESPONSIVE */
+@media(max-width:900px){
+  .about-intro{
+    grid-template-columns:1fr;
+  }
+  .page-hero h2{
+    font-size:32px;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <img src="logo.png" alt="a logo" width="60" height="80">
+  <h1>
+   LL & K Company Limited
+  </h1>
+  <nav>
+    <a href="Home.html">Home</a>
+    <a href="Services.html">Services</a>
+    <a href="About.html">About</a>
+    <a href="Materials.html">Materials</a>
+    <a href="Contact.html">Contact</a>
+  </nav>
+</header>
+
+<section class="page-hero">
+
+  <h2>About LL & K Company Limited</h2>
+  <p>
+    A trusted professional firm providing quantity surveying expertise
+    and quality building materials for successful construction projects.
+  </p>
+</section>
+
+<section>
+  <div class="about-intro">
+    <div>
+      <h3>Who We Are</h3>
+      <p>
+        LL & K Company Limited is a professionally driven construction services
+        firm specializing in quantity surveying, cost management, and the
+        supply of quality building materials. We support developers,
+        contractors, and private clients with accurate financial control
+        and reliable construction solutions.
+      </p>
+      <div class="values-grid"></div> 
+        Our approach is built on professionalism, transparency, and
+        a deep understanding of construction economics.
+      </p>
+    </div>
+   
+  </div>
+</section>
+
+<section class="values">
+  <div class="section-title" style="text-align:center;margin-bottom:50px;">
+    <h2>Our Core Values</h2>
+  </div>
+
+  <div class="values-grid">
+    <div class="value-box">
+      <h4>Integrity</h4>
+      <p>We uphold honesty, transparency, and ethical practices in all our engagements.</p>
+    </div>
+    <div class="image">
+      <img >
+
+    </div>
+
+    <div class="value-box">
+      <h4>Accuracy</h4>
+      <p>Precision and reliability guide every estimate, report, and professional opinion.</p>
+    </div>
+
+    <div class="value-box">
+      <h4>Quality</h4>
+      <p>We deliver services and materials that meet recognized industry standards.</p>
+    </div>
+
+    <div class="value-box">
+      <h4>Client Focus</h4>
+      <p>We work closely with our clients to understand their goals and deliver value.</p>
+    </div>
+  </div>
+</section>
+
+<section class="mission">
+  <div class="mission-grid">
+    <div class="mission-box">
+      <h3>Our Mission</h3> 
+      <p>
+        To provide professional quantity surveying services and reliable
+        building materials that enhance project efficiency, control costs,
+        and ensure successful delivery.
+      </p>
+    </div>
+
+    <div class="mission-box">
+      <h3>Our Vision</h3>
+      <p>
+        To be a leading construction consultancy and materials supplier,
+        recognized for excellence, integrity, and client satisfaction.
+      </p>
+    </div>
+
+    <div class="mission-box">
+      <h3>Our Commitment</h3>
+      <p>
+        We are committed to delivering timely, accurate, and professional
+        services that add lasting value to every project we undertake.
+      </p>
+    </div>
+  </div>
+</section>
+
+<section class="cta">
+  <h2>Build With Professionals You Can Trust</h2>
+  <p>Let’s work together to deliver successful construction projects.</p>
+   <a href="Contact.html">Contact Us today!</a>
+</section>
+
+<footer>
+  © 2026 LL & K Company Limited. All Rights Reserved.
+</footer>
+
+<script>
+// Fade-in animation
+const sections = document.querySelectorAll("section");
+
+window.addEventListener("scroll", () => {
+  sections.forEach(sec => {
+    const pos = sec.getBoundingClientRect().top;
+    if(pos < window.innerHeight - 100){
+      sec.style.opacity = 1;
+      sec.style.transform = "translateY(0)";
+    }
+  });
+});
+
+sections.forEach(sec => {
+  sec.style.opacity = 0;
+  sec.style.transform = "translateY(40px)";
+  sec.style.transition = "0.6s ease";
+});
+</script>
+</body>
+</html>

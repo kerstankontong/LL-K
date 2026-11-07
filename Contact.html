@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>LL & K Company Limited</title>
+
+<style>
+:root{
+  --primary:#0b3c5d;
+  --secondary:#1d2731;
+  --accent:#f4b41a;
+  --light:#f5f7fb;
+}
+
+*{margin:0;padding:0;box-sizing:border-box;font-family:Segoe UI,Arial;}
+html{scroll-behavior:smooth;}
+body{color:#333;line-height:1.6;}
+
+/* HEADER */
+header{
+  position:sticky;top:0;z-index:1000;
+  background:#fff;padding:18px 8%;
+  display:flex;justify-content:space-between;align-items:center;
+  box-shadow:0 2px 10px rgba(0,0,0,.05);
+}
+header h1{color:var(--primary);font-size:22px;}
+nav a{
+  margin-left:20px;text-decoration:none;color:#333;font-weight:500;
+}
+nav a:hover{color:var(--accent);}
+
+/* SECTIONS */
+section{padding:90px 8%;}
+.section-title{text-align:center;margin-bottom:50px;}
+.section-title h2{color:var(--primary);font-size:34px;}
+
+/* HERO */
+.hero{
+  background:linear-gradient(rgba(11,60,93,.85),rgba(11,60,93,.85)),
+  url("https://images.unsplash.com/photo-1503387762-592deb58ef4e") center/cover;
+  color:#fff;
+}
+.hero h2{font-size:42px;max-width:700px;}
+.hero p{margin:20px 0;max-width:650px;}
+.hero button{
+  padding:14px 32px;background:var(--accent);
+  border:none;font-weight:600;cursor:pointer;
+}
+
+/* SERVICES */
+.grid{display:grid;gap:30px;}
+.services{grid-template-columns:repeat(auto-fit,minmax(260px,1fr));}
+.card{
+  background:var(--light);padding:30px;border-radius:6px;
+  transition:.3s;
+}
+.card:hover{transform:translateY(-8px);box-shadow:0 12px 30px rgba(0,0,0,.1);}
+
+/* ABOUT */
+.about{display:grid;grid-template-columns:1fr 1fr;gap:40px;}
+.about img{width:100%;border-radius:6px;}
+
+/* MATERIALS & PROJECTS */
+.materials,.projects{grid-template-columns:repeat(auto-fit,minmax(250px,1fr));}
+.box img{
+  width:100%;height:180px;object-fit:cover;border-radius:6px;
+}
+
+/* CONTACT */
+.contact{display:grid;grid-template-columns:1fr 1fr;gap:40px;}
+form{
+  background:var(--light);
+  padding:30px;
+  border-radius:6px;
+   font-size:medium;
+}
+input,textarea,select{
+  width:100%;padding:12px;margin-bottom:15px;border:1px solid #ccc;  border-radius: 16px; 
+}
+
+button.primary{
+  background:var(--primary);color:#fff;border:none;padding:12px;width:100%;
+}
+.whatsapp{
+  display:inline-block;background:#25D366;color:#fff;
+  padding:12px 22px;text-decoration:none;border-radius:4px;
+}
+
+/* FOOTER */
+footer{background:#111;color:#ccc;text-align:center;padding:25px;}
+
+@media(max-width:900px){
+  .about,.contact{grid-template-columns:1fr;}
+  .hero h2{font-size:32px;}
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <h1>LL & K Company Limited</h1>
+  <nav>
+    <a href="Home.html">Home</a>
+    <a href="Services.html">Services</a>
+    <a href="About.html">About</a>
+    <a href="Materials.html">Materials</a>
+    <a href="Contact.html">Contact</a>
+  </nav>
+</header>
+
+<!-- HOME -->
+<section class="hero" id="home">
+  <h2>Quantity Surveying & Quality Building Materials</h2>
+  <p>
+    Professional cost management, surveying services, and reliable
+    construction materials for successful projects.
+  </p>
+  <button onclick="location.href='#contact'">Get Started</button>
+</section>
+
+<!-- SERVICES -->
+<section id="services">
+  <div class="section-title"><h2>Our Services</h2></div>
+  <div class="grid services">
+    <div class="card">Quantity Surveying & BOQ Preparation</div>
+    <div class="card">Cost Planning & Control</div>
+    <div class="card">Procurement & Tender Evaluation</div>
+    <div class="card">Building Materials Supply</div>
+    <div class="card">Project Advisory Services</div>
+    <div class="card">Construction Cost Certification</div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about">
+  <div class="section-title"><h2>About Us</h2></div>
+  <div class="about">
+    <div>
+      <p>
+        LL & K Company Limited is a professional construction consultancy
+        specializing in quantity surveying and quality building materials supply.
+        We deliver accuracy, integrity, and value on every project.
+      </p>
+    </div>
+    <img src="https://images.unsplash.com/photo-1581092919531-4c8d5f40b0b1">
+  </div>
+</section>
+
+<!-- MATERIALS -->
+<section id="materials">
+  <div class="section-title"><h2>Building Materials</h2></div>
+  <div class="grid materials">
+    <div class="box"><img src="Cement.webp"><p>Cement</p></div>
+    <div class="box"><img src="Iron.webp"><p>Iron Rods</p></div>
+    <div class="box"><img src="Blocks.webp"><p>Blocks</p></div>
+    <div class="box"><img src="Sand.webp"><p>Sand & Aggregates</p></div>
+  </div>
+</section>
+
+<!-- PROJECTS -->
+<section id="projects">
+  <div class="section-title"><h2>Our Projects</h2></div>
+  <div class="grid projects">
+    <div class="box"><img src="Rest.webp"><p>Residential Projects</p></div>
+    <div class="box"><img src="Same.webp"><p>Commercial Buildings</p></div>
+    <div class="box"><img src="infast.webp"><p>Infrastructure Works</p></div>
+  </div>
+</section>
+
+<!-- CONTACT + QUOTE -->
+<section id="contact">
+  <div class="section-title"><h2>Contact & Quote</h2></div>
+  <div class="contact">
+
+    <form action="#" method="post">
+      <div class="inputs">
+      <input placeholder="Full Name" required>
+      <input placeholder="Phone Number" required>
+      <input type="email" placeholder="Email">
+      <select>
+        <option>Select Material</option>
+        <option>Cement</option>
+        <option>Iron Rods</option>
+        <option>Blocks</option>
+      </select>
+      <textarea placeholder="Message / Quantity"></textarea>
+      </div>
+      <button class="primary">Submit</button>
+    </form>
+
+    <div>
+      <p><strong>Location:</strong> Accra, Ghana</p><br>
+      <a class="whatsapp" href="https://wa.me/233XXXXXXXXX" target="_blank">
+        Chat on WhatsApp
+      </a><br><br>
+      <iframe width="100%" height="300"
+        src="https://www.google.com/maps?q=Accra,Ghana&output=embed"></iframe>
+    </div>
+
+  </div>
+</section>
+
+<footer>
+  © 2026 LL & K Company Limited. All Rights Reserved.
+</footer>
+
+</body>
+</html>
